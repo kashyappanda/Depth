@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="depthDevelopment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D3C-Ha-dNJ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="430"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pwb-Kd-17m">
+                                <rect key="frame" x="20" y="482" width="374" height="80"/>
+                                <color key="backgroundColor" red="0.1827571392" green="0.63338214159999995" blue="0.94734472039999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="QaC-pM-Q7r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Save Photo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="savePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ycu-a3-DxQ"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AUZ-kW-KcA">
+                                <rect key="frame" x="0.0" y="570" width="414" height="153"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="153" id="5Mk-9K-EOX"/>
+                                </constraints>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5C-XO-2N0">
+                                <rect key="frame" x="20" y="731" width="374" height="80"/>
+                                <color key="backgroundColor" red="0.1827571392" green="0.63338214159999995" blue="0.94734472039999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="sDq-NU-H7e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Open Photo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="openPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UT4-aH-gjb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="D3C-Ha-dNJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1WA-Hw-oNC"/>
+                            <constraint firstItem="D3C-Ha-dNJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4hI-Uk-vCN"/>
+                            <constraint firstItem="Pwb-Kd-17m" firstAttribute="centerX" secondItem="AUZ-kW-KcA" secondAttribute="centerX" id="81T-1K-gdc"/>
+                            <constraint firstItem="AUZ-kW-KcA" firstAttribute="top" secondItem="Pwb-Kd-17m" secondAttribute="bottom" constant="8" symbolic="YES" id="DM1-lJ-yW9"/>
+                            <constraint firstItem="D3C-Ha-dNJ" firstAttribute="leading" secondItem="AUZ-kW-KcA" secondAttribute="leading" id="TAQ-WL-hyW"/>
+                            <constraint firstItem="m5C-XO-2N0" firstAttribute="top" secondItem="AUZ-kW-KcA" secondAttribute="bottom" constant="8" symbolic="YES" id="U2u-RM-NCc"/>
+                            <constraint firstItem="Pwb-Kd-17m" firstAttribute="leading" secondItem="m5C-XO-2N0" secondAttribute="leading" id="Wpx-QL-xwd"/>
+                            <constraint firstItem="D3C-Ha-dNJ" firstAttribute="trailing" secondItem="AUZ-kW-KcA" secondAttribute="trailing" id="aYE-a4-eIL"/>
+                            <constraint firstAttribute="trailing" secondItem="D3C-Ha-dNJ" secondAttribute="trailing" id="fAC-i7-JFZ"/>
+                            <constraint firstItem="Pwb-Kd-17m" firstAttribute="top" secondItem="D3C-Ha-dNJ" secondAttribute="bottom" constant="8" symbolic="YES" id="gHg-LQ-cyU"/>
+                            <constraint firstItem="Pwb-Kd-17m" firstAttribute="trailing" secondItem="m5C-XO-2N0" secondAttribute="trailing" id="nLl-OF-mpp"/>
+                            <constraint firstItem="Pwb-Kd-17m" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qYj-oO-mLl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="m5C-XO-2N0" secondAttribute="bottom" constant="51" id="rTv-YI-2XR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="D3C-Ha-dNJ" id="IEw-Ta-aPC"/>
+                        <outlet property="saveImageButton" destination="Pwb-Kd-17m" id="iKx-n0-9WE"/>
+                        <outlet property="subjectPicker" destination="AUZ-kW-KcA" id="5n3-2h-bZM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
+        </scene>
+    </scenes>
+</document>

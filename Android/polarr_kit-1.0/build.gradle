@@ -1,0 +1,4 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('polarr_kit-1.0.aar'))
+dependencies {
+}
